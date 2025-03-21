@@ -1,0 +1,75 @@
+<resources>
+    <string name="app_name">Nature Posts</string>
+
+    <string name="register_text">Register</string>
+    <string name="register_profile_image">Profile image</string>
+    <string name="register_plus">+</string>
+    <string name="register_nickname">Enter your Nickname</string>
+    <string name="register_enter_your_email">Enter your Email</string>
+    <string name="register_password">Create your password</string>
+    <string name="register_sign_up_btn">Sign up</string>
+    <string name="register_link_to_login_page">Are you have an account? Sign in</string>
+
+    <string name="login_text">Sign in</string>
+    <string name="login_image">Login image</string>
+    <string name="login_enter_your_email">Enter your Email</string>
+    <string name="login_password">Enter your password</string>
+    <string name="login_link_to_register_page">Don\'t have an account? Go to register</string>
+
+    <string name="toolbar_user_avatar_text">User Avatar</string>
+    <string name="toolbar_user_name_text">User Name</string>
+    <string name="toolbar_logout_btn_text">Logout</string>
+
+    <string name="bottom_navigator_create_post_text">Create Post</string>
+    <string name="bottom_navigator_posts_list_text">Posts list</string>
+    <string name="bottom_navigator_profile_posts_text">Profile posts</string>
+
+    <string name="create_post_make_photo">Make photo</string>
+    <string name="create_post_preview_photo">Preview photo</string>
+    <string name="switch_camera_btn">Switch camera</string>
+    <string name="create_post_post_title">Post title (max 30 characters)</string>
+    <string name="create_post_post_description">Post description (max 50 characters)</string>
+    <string name="create_post_latitude_longitude">Latitude: …\nLongitude: …</string>
+    <string name="create_post_capture_photo">Capture photo</string>
+    <string name="create_post_submit_post">Submit post</string>
+
+    <string name="post_details_location">Location</string>
+    <string name="post_details_add_comment">Add Comment</string>
+    <string name="post_details_back_to_list">Back to list</string>
+
+    <string name="item_post_image">Post image</string>
+    <string name="item_post_details">Details</string>
+    <string name="item_comment_user_photo">User photo</string>
+
+    <string name="post_map_latitude">Latitude: 0.0</string>
+    <string name="post_map_longitude">Longitude: 0.0</string>
+    <string name="post_map_back_btn">Back</string>
+
+    <string name="add_comment_input">Write your comment…(max 30 characters)</string>
+    <string name="add_comment_btn">Add comment</string>
+    <string name="add_comment_back_btn">Back</string>
+
+    <string name="settings_icon_text">Settings</string>
+    <string name="settings_user_avatar">User avatar</string>
+    <string name="settings_upload_new_avatar">Upload new avatar</string>
+    <string name="settings_change_avatar">Change avatar</string>
+    <string name="settings_current_user_name">Current user name</string>
+    <string name="settings_enter_new_username">Enter new name</string>
+    <string name="settings_change_name_icon">Rename icon</string>
+    <string name="settings_current_user_email">Current user email</string>
+    <string name="settings_enter_new_email">Enter new email</string>
+    <string name="settings_change_email_icon">Change email icon</string>
+    <string name="settings_enter_new_password">Enter new password</string>
+    <string name="settings_enter_current_password">Enter current password</string>
+    <string name="settings_change_password_icon">Change password icon</string>
+    <string name="settings_my_id">My ID: …</string>
+    <string name="settings_back_btn">Back</string>
+
+    <string name="autofill_hint_username">username</string>
+    <string name="autofill_hint_email">emailAddress</string>
+    <string name="autofill_hint_new_password">newPassword</string>
+    <string name="autofill_hint_current_password">currentPassword</string>
+    <string name="autofill_hint_post_title">title</string>
+    <string name="autofill_hint_post_description">longMessage</string>
+    <string name="autofill_hint_post_comment">comment</string>
+</resources>

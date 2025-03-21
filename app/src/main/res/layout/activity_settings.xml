@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="@color/background_main"
+    android:fillViewport="true"
+    android:theme="@style/AppTheme"
+    tools:context=".ui.SettingsActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"
+            android:maxWidth="498dp">
+
+            <LinearLayout
+                android:id="@+id/avatarSection"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border_all_sides"
+                android:baselineAligned="false"
+                android:maxWidth="498dp"
+                android:orientation="horizontal"
+                android:paddingHorizontal="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="120dp"
+                    android:maxWidth="166dp"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/userAvatar"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:contentDescription="@string/settings_user_avatar"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/default_avatar"
+                        app:shapeAppearanceOverlay="@style/CircleImageView" />
+                </RelativeLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    app:layout_constraintWidth_default="wrap"
+                    app:layout_constraintWidth_max="166dp"
+                    android:maxWidth="166dp"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/uploadText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:text="@string/settings_upload_new_avatar"
+                        android:textAlignment="center"
+                        android:textColor="@color/settings_main"
+                        app:layout_constraintBottom_toTopOf="@id/changeText"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/changeText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/settings_change_avatar"
+                        android:textColor="@color/settings_main"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/uploadText" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:maxWidth="166dp"
+                    android:layout_weight="1"
+                    android:gravity="end"
+                    android:paddingVertical="6dp">
+
+                    <ImageButton
+                        android:id="@+id/btnAddPhoto"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_alignParentEnd="true"
+                        android:background="@drawable/btn_circle"
+                        android:contentDescription="@string/settings_upload_new_avatar"
+                        android:onClick="onAddPhotoClick"
+                        android:src="@drawable/ic_add_photo"
+                        app:tint="@color/white" />
+
+                    <ImageButton
+                        android:id="@+id/btnChangeAvatar"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="60dp"
+                        android:background="@drawable/btn_circle"
+                        android:contentDescription="@string/settings_change_avatar"
+                        android:onClick="onChangeAvatarClick"
+                        android:src="@drawable/ic_change_avatar"
+                        app:tint="@color/white" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/nameSection"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@drawable/border_without_top"
+                android:orientation="horizontal"
+                android:paddingHorizontal="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHeight_percent="0.24"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/avatarSection">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:paddingVertical="8dp">
+
+                    <TextView
+                        android:id="@+id/userText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/settings_current_user_name"
+                        android:textColor="@color/settings_main"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/usernameEditText"
+                        style="@style/SettingsInputView"
+                        android:layout_marginTop="8dp"
+                        android:autofillHints="@string/autofill_hint_username"
+                        android:hint="@string/settings_enter_new_username"
+                        android:inputType="text"
+                        tools:ignore="RtlSymmetry" />
+
+                    <EditText
+                        android:id="@+id/passwordNameEditText"
+                        style="@style/SettingsInputView"
+                        android:layout_marginTop="8dp"
+                        android:autofillHints="@string/autofill_hint_current_password"
+                        android:hint="@string/settings_enter_current_password"
+                        android:inputType="textPassword" />
+                </LinearLayout>
+
+                <ImageButton
+                    android:id="@+id/btnChangeUsername"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="10dp"
+                    android:background="@drawable/btn_circle"
+                    android:contentDescription="@string/settings_change_name_icon"
+                    android:onClick="onChangeUsernameClick"
+                    android:src="@drawable/ic_rename"
+                    app:tint="@color/white" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/emailSection"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@drawable/border_without_top"
+                android:orientation="horizontal"
+                android:paddingHorizontal="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHeight_percent="0.22"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/nameSection">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/currentEmailText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/settings_current_user_email"
+                        android:textColor="@color/settings_main"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/newEmailEditText"
+                        style="@style/SettingsInputView"
+                        android:layout_marginTop="8dp"
+                        android:autofillHints="@string/autofill_hint_email"
+                        android:hint="@string/settings_enter_new_email"
+                        android:inputType="textEmailAddress" />
+
+                    <EditText
+                        android:id="@+id/passwordEmailEditText"
+                        style="@style/SettingsInputView"
+                        android:layout_marginTop="8dp"
+                        android:autofillHints="@string/autofill_hint_current_password"
+                        android:hint="@string/settings_enter_current_password"
+                        android:inputType="textPassword" />
+                </LinearLayout>
+
+                <ImageButton
+                    android:id="@+id/btnChangeEmail"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="10dp"
+                    android:background="@drawable/btn_circle"
+                    android:contentDescription="@string/settings_change_email_icon"
+                    android:onClick="onChangeEmailClick"
+                    android:src="@drawable/ic_email_edit"
+                    app:tint="@color/white" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/passwordSection"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@drawable/border_without_top"
+                android:orientation="horizontal"
+                android:paddingHorizontal="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHeight_percent="0.2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/emailSection">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:paddingVertical="8dp">
+
+                    <EditText
+                        android:id="@+id/newPasswordEditText"
+                        style="@style/SettingsInputView"
+                        android:autofillHints="@string/autofill_hint_new_password"
+                        android:hint="@string/settings_enter_new_password"
+                        android:inputType="textPassword" />
+
+                    <EditText
+                        android:id="@+id/currentPasswordEditText"
+                        style="@style/SettingsInputView"
+                        android:layout_marginTop="8dp"
+                        android:autofillHints="@string/autofill_hint_current_password"
+                        android:hint="@string/settings_enter_current_password"
+                        android:inputType="textPassword" />
+                </LinearLayout>
+
+                <ImageButton
+                    android:id="@+id/btnChangePassword"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="10dp"
+                    android:background="@drawable/btn_circle"
+                    android:contentDescription="@string/settings_change_password_icon"
+                    android:onClick="onChangePasswordClick"
+                    android:src="@drawable/ic_key_change"
+                    app:tint="@color/white" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:paddingVertical="2dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHeight_percent="0.15"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/passwordSection">
+
+                <TextView
+                    android:id="@+id/userIdText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/settings_my_id"
+                    android:textColor="@color/settings_main" />
+
+                <Button
+                    android:id="@+id/returnButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:backgroundTint="@color/button_main"
+                    android:onClick="onReturnClick"
+                    android:text="@string/settings_back_btn"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+</ScrollView>

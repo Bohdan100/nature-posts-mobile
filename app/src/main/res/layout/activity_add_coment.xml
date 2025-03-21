@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_main"
+    android:theme="@style/AppTheme"
+    tools:context=".ui.AddCommentActivity">
+
+    <EditText
+        android:id="@+id/commentEditText"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_margin="50dp"
+        android:paddingStart="5dp"
+        android:inputType="textMultiLine"
+        android:maxLength="30"
+        android:autofillHints="@string/autofill_hint_post_comment"
+        android:hint="@string/add_comment_input"
+        android:textColor="@color/text_description_main"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="RtlSymmetry" />
+
+    <Button
+        android:id="@+id/submitCommentButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/add_comment_btn"
+        android:textColor="@android:color/white"
+        android:backgroundTint="@color/button_main"
+        app:layout_constraintTop_toBottomOf="@id/commentEditText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/backButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/add_comment_back_btn"
+        android:textColor="@android:color/white"
+        android:backgroundTint="@color/button_main"
+        app:layout_constraintTop_toBottomOf="@id/submitCommentButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
