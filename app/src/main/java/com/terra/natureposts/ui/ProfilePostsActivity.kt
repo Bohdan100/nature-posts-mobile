@@ -18,8 +18,8 @@ import androidx.recyclerview.widget.RecyclerView
 
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.firebase.auth.FirebaseAuth
-import com.terra.natureposts.R
 
+import com.terra.natureposts.R
 import com.terra.natureposts.adapters.PostsAdapter
 import com.terra.natureposts.helpers.BottomNavigationHelper
 import com.terra.natureposts.helpers.FirebaseDataHelper

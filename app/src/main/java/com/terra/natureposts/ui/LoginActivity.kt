@@ -2,18 +2,18 @@ package com.terra.natureposts.ui
 
 import android.annotation.SuppressLint
 import android.os.Bundle
-import androidx.activity.enableEdgeToEdge
-import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
-
 import android.content.Intent
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
-import com.terra.natureposts.R
 
+import androidx.activity.enableEdgeToEdge
+import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.ViewCompat
+import androidx.core.view.WindowInsetsCompat
+
+import com.terra.natureposts.R
 import com.terra.natureposts.helpers.FirebaseAuthHelper
 import com.terra.natureposts.helpers.KeyboardHelper.setupHideKeyboardOnTouchOutside
 

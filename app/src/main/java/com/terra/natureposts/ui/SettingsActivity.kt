@@ -5,18 +5,20 @@ import android.os.Bundle
 import android.widget.EditText
 import android.widget.ImageView
 import android.widget.TextView
+
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+
 import com.bumptech.glide.Glide
+
 import com.terra.natureposts.R
 import com.terra.natureposts.helpers.FirebaseAuthHelper
 import com.terra.natureposts.helpers.KeyboardHelper.setupHideKeyboardOnTouchOutside
 import com.terra.natureposts.helpers.SettingsHelper
 
 class SettingsActivity : AppCompatActivity() {
-
     private lateinit var userAvatar: ImageView
     private lateinit var usernameEditText: EditText
     private lateinit var passwordNameEditText: EditText

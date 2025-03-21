@@ -1,11 +1,5 @@
 package com.terra.natureposts.ui
 
-import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
-import androidx.activity.enableEdgeToEdge
-import androidx.activity.result.contract.ActivityResultContracts
-
 import android.os.Bundle
 import android.content.Intent
 import android.net.Uri
@@ -14,8 +8,14 @@ import android.widget.EditText
 import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
-import com.terra.natureposts.R
 
+import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.ViewCompat
+import androidx.core.view.WindowInsetsCompat
+import androidx.activity.enableEdgeToEdge
+import androidx.activity.result.contract.ActivityResultContracts
+
+import com.terra.natureposts.R
 import com.terra.natureposts.helpers.KeyboardHelper.setupHideKeyboardOnTouchOutside
 import com.terra.natureposts.helpers.ImagePermissionHelper
 import com.terra.natureposts.helpers.FirebaseAuthHelper

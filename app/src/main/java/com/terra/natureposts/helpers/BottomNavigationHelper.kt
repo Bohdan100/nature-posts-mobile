@@ -2,13 +2,13 @@ package com.terra.natureposts.helpers
 
 import android.content.Intent
 import com.google.android.material.bottomnavigation.BottomNavigationView
+
 import com.terra.natureposts.ui.CreatePostActivity
 import com.terra.natureposts.ui.PostsActivity
 import com.terra.natureposts.ui.ProfilePostsActivity
 import com.terra.natureposts.R
 
 object BottomNavigationHelper {
-
     fun setupBottomNavigation(
         bottomNavigationView: BottomNavigationView,
         currentActivity: android.app.Activity,

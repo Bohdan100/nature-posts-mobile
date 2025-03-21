@@ -5,16 +5,17 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import com.terra.natureposts.R
-import com.terra.natureposts.databinding.ActivityPostMapBinding
+
 import org.osmdroid.config.Configuration
 import org.osmdroid.tileprovider.tilesource.TileSourceFactory
 import org.osmdroid.util.GeoPoint
 import org.osmdroid.views.MapView
 import org.osmdroid.views.overlay.Marker
 
-class PostMapActivity : AppCompatActivity() {
+import com.terra.natureposts.R
+import com.terra.natureposts.databinding.ActivityPostMapBinding
 
+class PostMapActivity : AppCompatActivity() {
     private lateinit var binding: ActivityPostMapBinding
     private lateinit var mapView: MapView
     private var latitude: Double = 0.0

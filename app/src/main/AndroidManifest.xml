@@ -44,7 +44,6 @@
         <activity
             android:name=".ui.LoginActivity"
             android:exported="false" />
-
         <activity
             android:name=".ui.CreatePostActivity"
             android:exported="false" />

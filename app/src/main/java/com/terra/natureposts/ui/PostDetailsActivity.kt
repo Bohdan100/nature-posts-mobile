@@ -5,8 +5,8 @@ import android.content.Intent
 import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
-import androidx.activity.enableEdgeToEdge
 
+import androidx.activity.enableEdgeToEdge
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -14,15 +14,7 @@ import androidx.core.view.WindowInsetsCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
-import com.davemorrissey.labs.subscaleview.ImageSource
 import com.davemorrissey.labs.subscaleview.SubsamplingScaleImageView
-import android.net.Uri
-import androidx.exifinterface.media.ExifInterface
-import androidx.exifinterface.media.ExifInterface.*
-import java.io.InputStream
-import java.io.FileOutputStream
-import java.io.File
-import java.net.URL
 
 import com.terra.natureposts.R
 import com.terra.natureposts.adapters.CommentsAdapter
@@ -30,7 +22,6 @@ import com.terra.natureposts.helpers.FirebaseDataHelper
 import com.terra.natureposts.helpers.ImageSizeHelper
 import com.terra.natureposts.helpers.KeyboardHelper.setupHideKeyboardOnTouchOutside
 import com.terra.natureposts.models.Post
-
 
 class PostDetailsActivity : AppCompatActivity() {
     private var post: Post? = null

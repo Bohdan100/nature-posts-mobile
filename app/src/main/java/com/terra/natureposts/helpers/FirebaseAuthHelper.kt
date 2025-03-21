@@ -3,10 +3,10 @@ package com.terra.natureposts.helpers
 import android.net.Uri
 import android.content.Intent
 import android.widget.Toast
-import com.google.firebase.auth.EmailAuthProvider
 
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
+import com.google.firebase.auth.EmailAuthProvider
 import com.google.firebase.auth.UserProfileChangeRequest
 import com.google.firebase.storage.FirebaseStorage
 

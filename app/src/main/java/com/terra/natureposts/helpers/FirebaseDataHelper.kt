@@ -3,6 +3,7 @@ package com.terra.natureposts.helpers
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.Query
+
 import com.terra.natureposts.adapters.PostsAdapter
 import com.terra.natureposts.models.Post
 import com.terra.natureposts.models.Comment

@@ -4,15 +4,16 @@ import android.content.Context
 import android.content.Intent
 import android.net.Uri
 import android.widget.Toast
+
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.storage.FirebaseStorage
+
 import com.terra.natureposts.models.Coords
 import com.terra.natureposts.models.Post
 import com.terra.natureposts.ui.PostsActivity
 
 object CreatePostHelper {
-
     private val auth = FirebaseAuth.getInstance()
 
     fun submitPost(

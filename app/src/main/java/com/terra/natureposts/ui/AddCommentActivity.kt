@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
+
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -13,7 +14,6 @@ import com.terra.natureposts.helpers.FirebaseDataHelper
 import com.terra.natureposts.helpers.KeyboardHelper.setupHideKeyboardOnTouchOutside
 
 class AddCommentActivity : AppCompatActivity() {
-
     private lateinit var commentEditText: EditText
     private lateinit var submitCommentButton: Button
     private lateinit var backButton: Button

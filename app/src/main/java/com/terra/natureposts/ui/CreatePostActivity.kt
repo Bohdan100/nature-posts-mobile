@@ -60,7 +60,6 @@ import java.util.concurrent.ExecutorService
 import java.util.concurrent.Executors
 
 class CreatePostActivity : AppCompatActivity() {
-
     private lateinit var previewView: PreviewView
     private lateinit var imageCapture: ImageCapture
     private lateinit var cameraExecutor: ExecutorService
